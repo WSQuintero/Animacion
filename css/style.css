@@ -1,0 +1,500 @@
+body {
+  margin: 0;
+  height: 100vh;
+  width: auto;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  counter-reset: score;
+}
+
+.phone {
+  height: 96vh;
+  width: 96%;
+  max-width: 300px;
+  position: relative;
+  border: 8px solid black;
+  border-radius: 40px;
+  background-color: #ccefff;
+  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+}
+
+.layer-1 {
+  height: 450px;
+  width: 80px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 60px;
+  -webkit-animation-name: layer;
+          animation-name: layer;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes layer {
+  0% {
+    bottom: 0;
+  }
+  25% {
+    bottom: -80px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes layer {
+  0% {
+    bottom: 0;
+  }
+  25% {
+    bottom: -80px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  height: 50px;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 80px;
+  z-index: 2;
+}
+
+.layer-1 input[type=checkbox]:focus {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+}
+
+input[type=checkbox]:checked {
+  counter-increment: score;
+}
+
+.score::after {
+  content: counter(score);
+}
+
+.container {
+  position: absolute;
+  top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.logo {
+  width: 40%;
+  min-width: 200px;
+}
+
+.score {
+  width: 8%;
+  height: 2%;
+  position: relative;
+  text-align: center;
+  color: #bf624c;
+  bottom: 15px;
+}
+
+.layer-2 {
+  height: 450px;
+  width: 80px;
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 60px;
+  -webkit-animation-name: layer2;
+          animation-name: layer2;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes layer2 {
+  0% {
+    bottom: 0;
+  }
+  70% {
+    bottom: -80px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes layer2 {
+  0% {
+    bottom: 0;
+  }
+  70% {
+    bottom: -80px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+.layer-3 {
+  width: 220px;
+  height: 400px;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: rgb(229, 82, 3);
+  bottom: 0;
+  border-radius: 20px;
+  -webkit-box-shadow: 10px rgb(118, 118, 118);
+          box-shadow: 10px rgb(118, 118, 118);
+}
+
+.layer-4 {
+  height: 350px;
+  width: 80px;
+  position: absolute;
+  z-index: 4;
+  bottom: 0;
+  left: 20px;
+  -webkit-animation-name: layer4;
+          animation-name: layer4;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes layer4 {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: -80px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes layer4 {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: -80px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+.layer-5 {
+  width: 210px;
+  height: 300px;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  margin: 0 auto;
+  background-color: rgb(229, 82, 3);
+  bottom: 0;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 10px rgb(80, 30, 0);
+          box-shadow: 5px 5px 10px rgb(80, 30, 0);
+}
+
+.layer-6 {
+  height: 200px;
+  width: 80px;
+  position: absolute;
+  z-index: 6;
+  bottom: 0;
+  right: 40px;
+  -webkit-animation-name: layer6;
+          animation-name: layer6;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes layer6 {
+  0% {
+    bottom: 0;
+  }
+  30% {
+    bottom: -80px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes layer6 {
+  0% {
+    bottom: 0;
+  }
+  30% {
+    bottom: -80px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+.layer-7 {
+  width: 160px;
+  height: 150px;
+  position: absolute;
+  z-index: 7;
+  right: 0;
+  margin: 0 auto;
+  background-color: rgb(229, 82, 3);
+  bottom: 0;
+  border-radius: 20px;
+  -webkit-box-shadow: -5px 5px 10px rgb(80, 30, 0);
+          box-shadow: -5px 5px 10px rgb(80, 30, 0);
+}
+
+.layer-8 {
+  width: 150px;
+  height: 90px;
+  position: absolute;
+  z-index: 8;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  background-color: rgb(50, 189, 0);
+  bottom: 0;
+  border-radius: 50%;
+  rotate: 90deg;
+}
+
+.layer-8-2 {
+  width: 100px;
+  height: 80px;
+  position: absolute;
+  z-index: 8;
+  right: 50px;
+  background-color: rgb(50, 189, 0);
+  bottom: 0;
+  border-radius: 50%;
+  rotate: 90deg;
+}
+
+.layer-8-3 {
+  width: 100px;
+  height: 80px;
+  position: absolute;
+  z-index: 8;
+  left: 50px;
+  background-color: rgb(50, 189, 0);
+  bottom: 0;
+  border-radius: 50%;
+  rotate: 90deg;
+}
+
+.layer-9 {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  z-index: 9;
+  left: 0;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  bottom: 0;
+  border-radius: 50%;
+}
+
+.layer-9-2 {
+  width: 100px;
+  height: 60px;
+  position: absolute;
+  z-index: 9;
+  left: 20px;
+  background-color: rgb(255, 255, 255);
+  bottom: 0;
+  border-radius: 50%;
+}
+
+.layer-9-3 {
+  width: 100px;
+  height: 60px;
+  position: absolute;
+  z-index: 9;
+  left: -20px;
+  background-color: rgb(255, 255, 255);
+  bottom: 0;
+  border-radius: 50%;
+}
+
+.layer-10 {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  bottom: 0;
+  border-radius: 50%;
+}
+
+.layer-10-2 {
+  width: 100px;
+  height: 60px;
+  position: absolute;
+  z-index: 10;
+  right: 20px;
+  background-color: rgb(255, 255, 255);
+  bottom: 0;
+  border-radius: 50%;
+}
+
+.layer-10-3 {
+  width: 100px;
+  height: 60px;
+  position: absolute;
+  z-index: 10;
+  right: -20px;
+  background-color: rgb(255, 255, 255);
+  bottom: 0;
+  border-radius: 50%;
+}
+
+.left-ear--outer {
+  height: 50px;
+  width: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 90%;
+  position: absolute;
+  left: 10px;
+}
+
+.left-ear--inner {
+  height: 50px;
+  width: 10px;
+  background-color: rgb(255, 166, 240);
+  border-radius: 90%;
+  position: absolute;
+  left: 15px;
+  top: 8px;
+}
+
+.right-ear--outer {
+  height: 50px;
+  width: 20px;
+  background-color: white;
+  border-radius: 90%;
+  position: absolute;
+  right: 10px;
+}
+
+.right-ear--inner {
+  height: 50px;
+  width: 10px;
+  background-color: rgb(255, 166, 240);
+  border-radius: 90%;
+  position: absolute;
+  right: 15px;
+  top: 8px;
+}
+
+.head {
+  width: 95%;
+  height: 100px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 50%;
+}
+.head__eye {
+  width: 4px;
+  height: 4px;
+  background-color: gray;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  -webkit-animation-name: blink;
+          animation-name: blink;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes blink {
+  0% {
+    height: 4px;
+  }
+  5% {
+    -webkit-transform: translateX(0px, 2px);
+            transform: translateX(0px, 2px);
+    height: 1px;
+  }
+  10% {
+    -webkit-transform: translateX(0px, 0px);
+            transform: translateX(0px, 0px);
+    height: 4px;
+  }
+}
+@keyframes blink {
+  0% {
+    height: 4px;
+  }
+  5% {
+    -webkit-transform: translateX(0px, 2px);
+            transform: translateX(0px, 2px);
+    height: 1px;
+  }
+  10% {
+    -webkit-transform: translateX(0px, 0px);
+            transform: translateX(0px, 0px);
+    height: 4px;
+  }
+}
+.head__eye--left {
+  left: 25px;
+}
+.head__eye--right {
+  right: 25px;
+}
+
+.zigzag {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(135deg, rgb(50, 189, 0) 50%, transparent 25%) -50px 0, linear-gradient(-135deg, rgb(50, 189, 0) 50%, transparent 25%) -50px 0, linear-gradient(45deg, rgb(229, 82, 3) 20%, transparent 25%), linear-gradient(-45deg, rgb(229, 82, 3) 20%, rgba(183, 65, 2, 0.964) 25%);
+  background-size: 20px 40px;
+  background-repeat: repeat-x;
+  border-radius: 20px;
+}
